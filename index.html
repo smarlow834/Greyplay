@@ -1,127 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Greyplay</title>
-  <link rel="icon" type="image/png" href="Greyplay%20Logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
-    header {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .logo {
-      max-width: 250px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      color: #cbd5f5;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: white;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 20px;
-      margin-top: 20px;
-    }
-    .button-group {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-    .download-btn {
-      display: inline-block;
-      background: #6366f1;
-      padding: 15px 25px;
-      color: white;
-      border-radius: 10px;
-      font-size: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      min-width: 200px;
-      text-align: center;
-    }
-    .download-btn:hover {
-      background: #4f46e5;
-    }
-    .macos {
-      background: #475569;
-    }
-    .macos:hover {
-      background: #334155;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #94a3b8;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greyplay | Indie Game Studio</title>
+    
+    <link rel="icon" type="image/png" href="Greyplay%20Logo.png">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #6366f1;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #1e293b, #0f172a);
+        }
+
+        .logo {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3));
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: var(--text-dim);
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .download-btn {
+            flex: 1;
+            min-width: 250px;
+            background: var(--accent);
+            padding: 18px 30px;
+            color: white;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            background: #4f46e5;
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
+        }
+
+        .macos {
+            background: #475569;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .macos:hover {
+            background: #334155;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-bg);
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <img src="Greyplay%20Logo.png" alt="Greyplay Logo" class="logo">
-  <p>Indie Game Development Studio</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#games">Games</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <img src="Greyplay%20Logo.png" alt="Greyplay Logo" class="logo">
+    <p style="color: var(--text-dim); margin-top: 10px;">Forging unique digital experiences.</p>
+    <nav>
+        <a href="#about">Studio</a>
+        <a href="#games">Projects</a>
+        <a href="#contact">Connect</a>
+    </nav>
 </header>
 
 <section id="about">
-  <h2>About Us</h2>
-  <p>Greyplay is an indie game development brand focused on creating unique and fun gaming experiences. We're currently working on our first title and more projects are planned for the future.</p>
+    <h2>The Studio</h2>
+    <p>Greyplay is an independent development house dedicated to tight gameplay loops and immersive storytelling. We believe in "play-first" design, ensuring every mechanic feels intentional and rewarding.</p>
 </section>
 
 <section id="games">
-  <h2>Our Game</h2>
-  <div class="card">
-    <h3>Valid Excuses</h3>
-    <p>An upcoming game currently in development. Select your platform below to download the latest test version.</p>
-    
-    <div class="button-group">
-      <a href="Greyplay%20Testing%20Games.zip" download class="download-btn">
-        Download for Windows (.zip)
-      </a>
+    <h2>Current Projects</h2>
+    <div class="game-card">
+        <h3 style="font-size: 1.8rem; margin-top: 0;">Valid Excuses</h3>
+        <p>A fast-paced title currently in the technical alpha stage. We are actively seeking testers to provide feedback on core mechanics and performance across different systems.</p>
+        
+        <div class="button-group">
+            <a href="Greyplay%20Testing%20Games.zip" download class="download-btn">
+                Deploy for Windows (.zip)
+            </a>
 
-      <a href="Greyplay%20Testing%20Games%20MacOS.app.zip" download class="download-btn macos">
-        Download for MacOS (.zip)
-      </a>
+            <a href="Greyplay%20Testing%20Games%20MacOS.app.zip" download class="download-btn macos">
+                Deploy for MacOS (.zip)
+            </a>
+        </div>
     </div>
-  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Want to follow development or get in touch? More links coming soon.</p>
+    <h2>Connect</h2>
+    <p>Interested in testing or collaboration? Devlogs and community links are currently under construction. Check back soon for updates.</p>
 </section>
 
 <footer>
-  <p>© 2026 Greyplay. All rights reserved.</p>
+    <p>&copy; 2026 Greyplay. Built with passion.</p>
 </footer>
 
 </body>
