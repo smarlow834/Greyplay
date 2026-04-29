@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greyplay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #cbd5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: white;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    /* Container for buttons to keep them spaced nicely */
+    .button-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .download-btn {
+      display: inline-block;
+      background: #6366f1;
+      padding: 15px 25px;
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      min-width: 200px;
+      text-align: center;
+    }
+    .download-btn:hover {
+      background: #4f46e5;
+    }
+    /* Optional: Style for the MacOS button to differentiate it */
+    .macos {
+      background: #475569;
+    }
+    .macos:hover {
+      background: #334155;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Greyplay Logo.png" alt="Greyplay Logo" class="logo">
+  <p>Indie Game Development Studio</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Greyplay is an indie game development brand focused on creating unique and fun gaming experiences. We're currently working on our first title and more projects are planned for the future.</p>
+</section>
+
+<section id="games">
+  <h2>Our Game</h2>
+  <div class="card">
+    <h3>Valid Excuses</h3>
+    <p>An upcoming game currently in development. Select your platform below to download the latest test version.</p>
+    
+    <div class="button-group">
+      <a href="Greyplay Testing Games.zip" download class="download-btn">
+        Download for Windows (.zip)
+      </a>
+
+      <a href="Greyplay Testing Games MacOS.app.zip" download class="download-btn macos">
+        Download for MacOS (.zip)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Want to follow development or get in touch? More links coming soon.</p>
+</section>
+
+<footer>
+  <p>© 2026 Greyplay. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
